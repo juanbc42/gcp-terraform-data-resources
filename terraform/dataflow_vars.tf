@@ -1,11 +1,10 @@
-variable "dataflow_name" {
-  default = "dataflow-job"
-}
+variable "dataflow_vars" {
+  type        = map(string)
+  description = "description"
 
-variable "template_gcs_path" {
-  default = "gs://my-bucket/templates/template_file"
-}
-
-variable "temp_gcs_location" {
-  default = "gs://my-bucket/tmp_dir"
+  default = {
+    name              = "dataflow-job"
+    temp_gcs_location = "gs://my-bucket/tmp_dir"
+    template_gcs_path = "gs://my-bucket/templates/template_file"
+  }
 }
