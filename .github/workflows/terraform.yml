@@ -1,4 +1,4 @@
-name: 'Terraform'
+name: 'Terraform Init and Format'
 
 on:
   push:
